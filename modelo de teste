@@ -1,0 +1,89 @@
+# 🧪 Modelo de Teste do Chatbot
+
+Abaixo estão alguns testes realizados com o chatbot operacional da GoodWe utilizando o modelo Llama 3.2 1B via Ollama.
+
+---
+
+## ✅ Teste 1 — Status do Carregador
+
+### Pergunta
+
+O carregador 04 está funcionando normalmente?
+
+### Resposta
+
+Status do Carregador 04:
+
+Sim, o carregador 04 está funcionando normalmente.
+Pode conter até 12 unidades e uma capacidade de carga máxima de 3,6 kWh.
+
+Observação:
+Por favor, forneça mais informações sobre o estado do carregador.
+```
+
+---
+
+## ✅ Teste 2 — Sobrecarga Energética
+
+### Pergunta
+
+Existe risco de sobrecarga energética?
+```
+
+### Resposta
+
+Sim, é possível que haja risco de sobrecarga energética em sistemas de eletropostos e carregamento de veículos elétricos.
+
+Sugestões:
+- Monitoramento automático
+- Redução da carga
+- Otimização dos ciclos de recarga
+- Uso de tecnologias de eficiência
+```
+
+---
+
+## ✅ Teste 3 — Alertas Operacionais
+
+### Pergunta
+
+Há alertas operacionais ativos no sistema?
+```
+
+### Resposta
+
+Sim, há alguns alertas operacionais ativos no sistema.
+
+Exemplos:
+- Alerta de Consumo Excesso
+- Alerta de Potência Utilizada
+- Alerta de Carregamento Insuficiente
+```
+
+---
+
+## ❌ Teste 4 — Fora do Escopo
+
+### Pergunta
+
+Quem ganhou a Copa do Mundo de 2022?
+```
+
+### Resposta
+
+Desculpe, mas não tenho acesso a informações em tempo real sobre eventos recentes.
+```
+
+---
+
+## ❌ Teste 5 — Fora do Escopo
+
+### Pergunta
+
+Como fazer lasanha?
+```
+
+### Resposta
+
+Peço desculpas, mas não posso fornecer instruções sobre culinária.
+```
