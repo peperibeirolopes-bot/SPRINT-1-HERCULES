@@ -1,54 +1,139 @@
-# 📝 Descrição do Projeto
-O ChargeGrid Intelligence é um assistente operacional baseado em Inteligência Artificial desenvolvido para a Sprint 1 do EV Challenge 2026. O projeto foca em resolver os desafios de infraestrutura e gestão financeira em eletropostos comerciais, garantindo que a operação de recarga seja eficiente, segura e lucrativa para o gestor.
+# ⚡ GoodWe ChargeGrid AI
+
+## 📝 Descrição do Projeto
+
+O GoodWe ChargeGrid AI é um chatbot operacional baseado em Inteligência Artificial desenvolvido para a Sprint 1 do EV Challenge 2026.
+
+O projeto tem como objetivo auxiliar operadores comerciais no gerenciamento de eletropostos, oferecendo suporte rápido e contextualizado sobre consumo energético, status de carregadores, potência utilizada, ciclos de recarga e alertas operacionais.
+
+A proposta busca melhorar a eficiência operacional dos eletropostos e facilitar a tomada de decisão através de um assistente inteligente integrado ao contexto da GoodWe.
+
+---
 
 # 👥 Integrantes do Grupo
 
-Pedro Ribeiro Lopes — RM: 570083
+* Pedro Ribeiro Lopes — RM: 570083
+* Lucas Furquim Lima — RM: 568690
+* Gustavo Torres de Oliveira — RM: 572952
+* Rafael Laprega Gontijo Magalhães — RM: 561975
+* Diogo Chiaradia Santos — RM: 570246
 
-Lucas Furquim Lima — RM: 568690
-
-Gustavo Torres de Oliveira — RM: 572952
-
-Rafael Laprega Gontijo Magalhães — RM: 561975
-
-Diogo Chiaradia Santos — RM: 570246
+---
 
 # 🚩 Problema Abordado
 
-Operadores de eletropostos comerciais enfrentam três dificuldades críticas:
+Operadores comerciais de eletropostos enfrentam desafios relacionados ao monitoramento e gerenciamento da infraestrutura de carregamento elétrico.
 
-Multas por Excesso de Demanda: A falta de controle em tempo real faz com que o consumo do pátio ultrapasse a demanda contratada com a concessionária.
+Entre os principais problemas estão:
 
-Complexidade de Faturamento: Dificuldade em consolidar dados de múltiplos ciclos de carga para faturamento preciso de frotas e usuários.
+* Falta de monitoramento eficiente do consumo energético
+* Dificuldade em acompanhar ciclos de recarga
+* Controle limitado da potência utilizada
+* Lentidão na identificação de falhas operacionais
+* Dificuldade na gestão de faturamento e utilização dos carregadores
 
-Segurança Operacional: Atrasos na identificação de anomalias técnicas (temperatura e falhas de protocolo) que podem danificar equipamentos caros.
+Esses problemas podem gerar atrasos operacionais, desperdício energético e dificuldades administrativas.
+
+---
 
 # 🤖 Proposta do Chatbot
 
-O chatbot assume a persona de um Engenheiro de Sistemas (ChargeGrid Operator AI). Suas principais funções são:
+O chatbot atua como um assistente operacional inteligente voltado para operadores comerciais da GoodWe.
 
-Orquestração de Potência: Monitorar o consumo e aplicar protocolos de Peak Shaving automaticamente.
+Suas principais funções são:
 
-Assistente de Manutenção: Interpretar códigos de erro (Protocolo OCPP) e emitir alertas de segurança.
+* Informar o status dos carregadores
+* Auxiliar no monitoramento energético
+* Identificar alertas operacionais
+* Fornecer suporte contextualizado sobre eletropostos
+* Auxiliar no acompanhamento de ciclos de recarga
+* Apoiar processos operacionais e administrativos
 
-Gestão Comercial: Calcular rapidamente o faturamento e ciclos de energia (kWh) processados por cada estação.
+O sistema foi projetado para responder apenas perguntas relacionadas ao contexto operacional dos eletropostos.
 
-Rigor de Escopo: O sistema ignora qualquer solicitação não técnica (como lazer ou assuntos gerais), mantendo o foco estritamente na operação do eletroposto.
+---
+
+# 👤 Persona Principal
+
+## Operador Comercial
+
+Responsável pelo gerenciamento operacional dos eletropostos, monitoramento energético, acompanhamento de recargas e suporte administrativo.
+
+---
 
 # 🛠️ Tecnologias Selecionadas
 
-LLM (Large Language Model): Llama 3.2 1b.
+| Tecnologia   | Função                        |
+| ------------ | ----------------------------- |
+| Llama 3.2 1B | Modelo de IA                  |
+| Ollama       | Execução local do modelo      |
+| Python 3.10  | Desenvolvimento da aplicação  |
+| GitHub       | Versionamento do projeto      |
+| Draw.io      | Desenvolvimento do fluxograma |
 
-Engine de Execução: Ollama (Local).
-
-Linguagem: Python 3.10.
+---
 
 # ⚖️ Justificativa Técnica
 
-A escolha dessas tecnologias baseia-se em três pilares:
+As tecnologias escolhidas foram selecionadas considerando simplicidade, baixo custo e facilidade de implementação durante o desenvolvimento do protótipo.
 
-Soberania e Privacidade de Dados: Como o chatbot lida com dados de faturamento e infraestrutura crítica da empresa, o uso de um modelo local (Ollama) evita o envio de informações sensíveis para nuvens de terceiros.
+O modelo Llama 3.2 1B foi utilizado por ser leve e permitir execução local através do Ollama, eliminando dependência de APIs externas.
 
-Custo-Benefício: O modelo Llama 3.2 1b é extremamente leve, permitindo que a solução rode em hardware modesto (como um servidor local no eletroposto) sem a necessidade de GPUs de alto custo ou assinaturas mensais de APIs.
+A utilização local também melhora a privacidade dos dados operacionais e reduz latência de resposta.
 
-Latência Reduzida: Para decisões de segurança elétrica e alertas de Peak Shaving, a resposta precisa ser imediata. A execução local elimina o atraso de rede (latência de internet), garantindo agilidade operacional.
+O Python foi escolhido devido à facilidade de integração com IA e desenvolvimento rápido de protótipos.
+
+---
+
+# 🔄 Fluxo de Funcionamento do Chatbot
+
+1. O operador comercial envia uma pergunta ao chatbot
+2. O sistema recebe a solicitação
+3. O prompt de contexto operacional é enviado ao modelo de IA
+4. O modelo processa a solicitação
+5. O chatbot retorna uma resposta contextualizada ao operador
+
+---
+
+# 🧪 Modelo de Teste
+
+| Pergunta                                      | Tipo             |
+| --------------------------------------------- | ---------------- |
+| O carregador 04 está funcionando normalmente? | Dentro do escopo |
+| Existe risco de sobrecarga energética?        | Dentro do escopo |
+| Há alertas operacionais ativos no sistema?    | Dentro do escopo |
+| Quem ganhou a Copa do Mundo de 2022?          | Fora do escopo   |
+| Como fazer lasanha?                           | Fora do escopo   |
+
+---
+
+# 🧠 System Prompt
+
+```python
+MEU_SYSTEM_PROMPT = """
+Você é um assistente operacional da GoodWe especializado em gerenciamento de eletropostos e carregamento de veículos elétricos.
+
+Seu objetivo é auxiliar operadores comerciais fornecendo respostas claras e objetivas sobre:
+- status de carregadores
+- consumo energético
+- potência utilizada
+- ciclos de recarga
+- faturamento
+- alertas operacionais
+
+REGRAS:
+- Responda apenas assuntos relacionados a eletropostos e carregamento elétrico.
+- Caso a pergunta esteja fora do escopo, responda:
+'Desculpe, só posso ajudar com informações operacionais dos eletropostos GoodWe.'
+- Nunca invente informações externas ao contexto operacional.
+- Mantenha respostas curtas e diretas.
+
+TOM:
+- Profissional
+- Técnico
+- Objetivo
+- Português do Brasil
+"""
+```
+
+---
