@@ -1,16 +1,13 @@
 # 🧪 Modelo de Testes — Sprint 2
 
-Os casos de teste definidos na Sprint 1 foram reutilizados para validar a implementação do chatbot com histórico e contexto.
+| Pergunta                                          |                                                                            Resultado resumido | Avaliação                |
+| ------------------------------------------------- | --------------------------------------------------------------------------------------------: | ------------------------ |
+| **O carregador 04 está funcionando normalmente?** | Respondeu dentro do contexto GoodWe, mas não confirmou o status; apenas sugeriu verificações. | 🟡 Parcialmente adequada |
+| **Existe risco de sobrecarga energética?**        |   Explicou fatores como potência, consumo e ciclos de recarga. Manteve o contexto do projeto. | 🟢 Adequada              |
+| **Há alertas operacionais ativos no sistema?**    |                               Criou alertas coerentes (sobrecarga, temperatura, tensão etc.). | 🟢 Adequada              |
+| **Quem ganhou a Copa do Mundo de 2022?**          |                                                   Recusou responder por estar fora do escopo. | 🟢 Adequada              |
+| **Como fazer lasanha?**                           |                                         Saiu completamente do escopo e respondeu uma receita. | 🔴 Inadequada            |
 
-| Pergunta | Resposta obtida (resumo) | Avaliação |
-|-----------|--------------------------|------------|
-| O carregador 04 está funcionando normalmente? | Modelo respondeu sobre status operacional do carregador | 🟡 Parcialmente adequada |
-| Existe risco de sobrecarga energética? | Explicou fatores que podem causar sobrecarga | 🟢 Adequada |
-| Há alertas operacionais ativos? | Apresentou informações sobre monitoramento | 🟡 Parcialmente adequada |
-| Quem ganhou a Copa do Mundo de 2022? | Resposta incorreta gerada pelo modelo | 🔴 Inadequada |
-| Como fazer lasanha? | Respondeu fora do escopo do projeto | 🔴 Inadequada |
-
----
 
 ## Conclusões
 
@@ -27,3 +24,121 @@ Foi observado que:
 - Alucinações do modelo
 - Respostas fora do escopo
 - Inconsistência em perguntas gerais
+
+# 🧠 Testes com Histórico e Memória Contextual
+
+Nesta etapa foram realizados testes utilizando o histórico de mensagens implementado no chatbot. O objetivo foi verificar se o sistema conseguia manter contexto, lembrar informações citadas anteriormente e continuar diálogos de forma coerente.
+
+Foi utilizado o histórico de mensagens combinado ao system prompt para simular uma conversa contínua entre operador e sistema.
+
+👤 Operador Comercial: Meu nome é Pedro e sou operador comercial de um eletroposto.
+
+🤖 GoodWe AI:
+Peço desculpas pelo erro anterior! Sim, Pedro, eu sou o assistente operacional da GoodWe.
+
+Agora que temos seu nome correto, posso responder às suas perguntas de forma mais profunda:
+
+-   **Status do carregador "04"**: Vou verificar a informação atual sobre o carregador e fornecer uma resposta mais precisa.
+
+
+👤 Operador Comercial: Qual é o status do carregador 04?
+
+🤖 GoodWe AI:
+Pedro,
+
+O carregador 04 está atualmente em um nível razoável, mas ainda há alguns problemas detectados que precisam ser analisados para garantir sua segurança e eficiência.
+
+Nós estão monitorando os dados e vamos tomar ações necessárias para corrigi-los. Você pode verificar o status do carregador no meu site ou aplicativo, onde você encontrará mais informações detalhadas sobre o estado atual do sistema de carregamento.
+
+**Alertas operacionais**: Qual é a próxima ação que vou tomar no carregador 04?
+* Você pode verificar os alertas operacionais que estamos gerando atualmente no meu site ou aplicativo.
+
+👤 Operador Comercial: Existe algum alerta operacional?
+
+🤖 GoodWe AI:
+Pedro,
+
+Nós não detectamos nenhum alerta operacional significativo no carregador 04. No entanto, para garantir sua segurança e eficiência, podemos realizar uma análise mais aprofundada do sistema de carregamento.
+
+**Status do carregador**: O que está acontecendo com o carregador 04 atualmente?
+* Você pode verificar os dados de status no meu site ou aplicativo.
+
+👤 Operador Comercial: Esse carregador precisa de manutenção?
+
+🤖 GoodWe AI:
+Pedro,
+
+Sim, o carregador 04 realmente precisa de uma troca imediata da bateria de alta capacidade e de alguns componentes mecânicos sujeitos a desgaste mais rápido. Além disso, há problemas em algumas unidades comuns que precisam ser substituídas.
+
+É recomendável realizar uma manutenção profissional o mais rápido possível para evitar danos irreversíveis ao carregador e garantir que ele continue funcionando corretamente no futuro.
+
+**Status do carregador**: Você está preparado para realizar a troca de componentes?
+* Existem outros problemas detectados no carregador 04 que precisam ser investigados ou reparados?
+
+👤 Operador Comercial: Qual carregador nós estávamos discutindo?
+
+🤖 GoodWe AI:
+Pedro,
+
+Nós estamos discutindo o carregador 04. Nós descobrimos que ele precisa de manutenção e troca de componentes para garantir sua segurança e eficiência.
+
+**Alerta operacional**: Qual é a próxima ação que vamos tomar no carregador 04?
+* Você pode verificar os alertas operacionais que estamos gerando atualmente no meu site ou aplicativo.
+
+👤 Operador Comercial: Voltando ao assunto anterior, quais alertas devo monitorar?
+
+🤖 GoodWe AI:
+Pedro,
+
+Nós discutimos o carregador 04 e descobrimos alguns problemas que precisam ser abordados:
+
+* Problemas com componentes mecânicos sujeitos a desgaste mais rápido
+* Problemas com a bateria de alta capacidade
+* Problemas com unidades comuns
+
+Nós também identificamos uma falta de manutenção em alguns componentes.
+
+**Alertas operacionais**: Qual é a próxima ação que vamos tomar no carregador 04?
+* Você pode verificar os alertas operacionais que estamos gerando atualmente no meu site ou aplicativo.
+
+👤 Operador Comercial: Quem ganhou a Copa do Mundo de 2022?
+
+🤖 GoodWe AI:
+Desculpe, Pedro,
+
+Não tenho acesso a informações sobre jogos ou eventos esportivos específicos como a Copa do Mundo de 2022. Além disso, só posso fornecer informações sobre carregadores elétricos.
+
+**Alerta operacional**: Qual é a próxima ação que vamos tomar no sistema de carregamento?
+* Você pode verificar os alertas operacionais que estamos gerando atualmente na minha plataforma de gerenciamento.
+
+👤 Operador Comercial: Como fazer lasanha?
+
+🤖 GoodWe AI:
+Desculpe, Pedro,
+
+Não posso fornecer instruções ou dicas sobre como fazer uma lasanha. Minha área de especialização está no gerenciamento de eletropostos e carregamento elétrico, não na culinária.
+
+**Alerta operacional**: Qual é a próxima ação que vamos tomar em relação ao sistema de carregamento?
+* Você pode verificar os alertas operacionais que estamos gerando atualmente na minha plataforma de gerenciamento.
+
+### Limitações observadas
+
+Durante os testes com histórico, o chatbot conseguiu manter contexto entre mensagens e lembrar referências anteriores, como o carregador 04 e o operador Pedro.
+
+Entretanto, o modelo Llama 3.2 1B apresentou comportamento de alucinação em algumas respostas, gerando informações não fornecidas pelo usuário, como necessidades específicas de manutenção e falhas técnicas inexistentes.
+
+Mesmo com essa limitação, o sistema demonstrou evolução significativa no uso de memória contextual e continuidade das conversas.
+
+Observou-se também pequenas inconsistências gramaticais geradas pelo modelo Llama 3.2:1B, consequência das limitações do modelo compacto utilizado localmente.
+
+| Pergunta                     | Avaliação                |
+| ---------------------------- | ------------------------ |
+| Meu nome é Pedro...          | 🟡 Parcialmente adequada |
+| Status do carregador 04      | 🟡 Parcialmente adequada |
+| Existe alerta operacional?   | 🟢 Adequada              |
+| Precisa de manutenção?       | 🟡 Parcialmente adequada |
+| Qual carregador discutíamos? | 🟢 Adequada              |
+| Voltando ao assunto anterior | 🟢 Adequada              |
+| Copa 2022                    | 🟢 Adequada              |
+| Lasanha                      | 🟢 Adequada              |
+
