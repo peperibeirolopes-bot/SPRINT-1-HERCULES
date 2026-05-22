@@ -1,0 +1,29 @@
+# 🧪 Modelo de Testes — Sprint 2
+
+Os casos de teste definidos na Sprint 1 foram reutilizados para validar a implementação do chatbot com histórico e contexto.
+
+| Pergunta | Resposta obtida (resumo) | Avaliação |
+|-----------|--------------------------|------------|
+| O carregador 04 está funcionando normalmente? | Modelo respondeu sobre status operacional do carregador | 🟡 Parcialmente adequada |
+| Existe risco de sobrecarga energética? | Explicou fatores que podem causar sobrecarga | 🟢 Adequada |
+| Há alertas operacionais ativos? | Apresentou informações sobre monitoramento | 🟡 Parcialmente adequada |
+| Quem ganhou a Copa do Mundo de 2022? | Resposta incorreta gerada pelo modelo | 🔴 Inadequada |
+| Como fazer lasanha? | Respondeu fora do escopo do projeto | 🔴 Inadequada |
+
+---
+
+## Conclusões
+
+Foi observado que:
+
+✅ O chatbot manteve contexto em parte das conversas
+
+✅ O histórico melhorou a continuidade das respostas
+
+✅ O modelo respondeu adequadamente perguntas relacionadas ao contexto GoodWe
+
+⚠️ Limitações encontradas:
+
+- Alucinações do modelo
+- Respostas fora do escopo
+- Inconsistência em perguntas gerais
