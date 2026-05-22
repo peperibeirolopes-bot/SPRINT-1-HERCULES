@@ -134,5 +134,149 @@ TOM:
 - Em português do Brasil
 """
 ```
+## SPRINT2
+
+# 🚀 Instalação e Execução
+
+## Pré-requisitos
+
+Antes de executar o projeto, é necessário possuir:
+
+- Python 3.10+
+- Ollama instalado
+- Google Colab (ou IDE Python)
+- Modelo Llama 3.2:1b
 
 ---
+
+## Instalação das dependências
+
+Instale as bibliotecas necessárias:
+
+```bash
+pip install ollama
+pip install ipywidgets
+```
+
+Caso esteja utilizando Google Colab:
+
+```python
+!pip install ollama -q
+!apt-get install -y zstd -q
+```
+
+---
+
+## Instalação do Ollama
+
+Instale o servidor Ollama:
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+Inicie o servidor:
+
+```bash
+ollama serve
+```
+
+Baixe o modelo utilizado:
+
+```bash
+ollama pull llama3.2:1b
+```
+
+---
+
+# 🔐 Variáveis de Ambiente
+
+Neste projeto não foi utilizada API Key, pois o modelo foi executado localmente via Ollama.
+
+Mesmo assim, seguindo boas práticas, caso APIs externas sejam utilizadas futuramente, recomenda-se armazenar credenciais através de:
+
+- Variáveis de ambiente
+- Google Colab Secrets
+
+Exemplo:
+
+```python
+import os
+
+API_KEY = os.getenv("API_KEY")
+```
+
+---
+
+# ▶ Como Executar
+
+Após instalar as dependências:
+
+Execute o notebook ou script Python:
+
+```bash
+python chatbot.py
+```
+
+ou execute diretamente no Google Colab.
+
+O chatbot iniciará:
+
+```text
+==================================================
+CHATBOT GOODWE
+Digite sair para encerrar
+==================================================
+```
+
+---
+
+# 💬 Exemplos de Uso
+
+Exemplos de perguntas dentro do escopo:
+
+```text
+Qual é o status do carregador 04?
+```
+
+```text
+Existe risco de sobrecarga energética?
+```
+
+```text
+Há alertas operacionais ativos?
+```
+
+```text
+Qual carregador está consumindo mais energia?
+```
+
+---
+
+Exemplo de uso do histórico:
+
+```text
+Meu nome é Pedro e sou operador comercial de um eletroposto.
+```
+
+Depois:
+
+```text
+Qual carregador nós estávamos discutindo?
+```
+
+O chatbot utiliza histórico de mensagens para manter contexto e gerar respostas contínuas.
+
+---
+
+Exemplos fora do escopo:
+
+```text
+Quem ganhou a Copa do Mundo de 2022?
+```
+
+```text
+Como fazer lasanha?
+```
+
+Durante os testes, observou-se que perguntas fora do contexto podem gerar respostas inconsistentes devido às limitações do modelo.
