@@ -193,10 +193,8 @@ ollama pull llama3.2:1b
 
 Neste projeto não foi utilizada API Key, pois o modelo foi executado localmente via Ollama.
 
-Mesmo assim, seguindo boas práticas, caso APIs externas sejam utilizadas futuramente, recomenda-se armazenar credenciais através de:
+Mesmo assim, seguindo boas práticas, caso APIs externas sejam utilizadas futuramente, será armazenada as credenciais através de:
 
-- Variáveis de ambiente
-- Google Colab Secrets
 
 Exemplo:
 
